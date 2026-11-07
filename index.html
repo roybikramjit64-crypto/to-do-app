@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="header-content">
+                <!----check circle icon here-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="check-icon"><path fill="currentColor" d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512zM374 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8L379.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z"/></svg>
+                <h1>My Task</h1>
+            </div>
+            <p id="date"></p>
+        </header>
+
+        <div class="todo-input">
+            <input type="text" id="task-input" placeholder="What do you need to do?">
+            <button id="add-task">
+                <!----plus icon here-->
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="currentColor" class="plus-icon"><path d="M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"/></svg>
+            </button>
+        </div>
+
+        <div class="filters">
+            <span class="filter active" data-filter="all">All</span>
+            <span class="filter" data-filter="active">Active</span>
+            <span class="filter" data-filter="completed">Completed</span>
+        </div>
+
+        <div class="todos-container">
+            <ul id="todos-list">
+                <!-----li will be inserted right here later-->
+            </ul>
+
+            <div class="empty-state hidden">
+                <!-------clipboard icon here-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="clipboard-icon"><path fill="currentColor" d="M311.4 32l8.6 0c35.3 0 64 28.7 64 64l0 352c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l8.6 0C83.6 12.9 104.3 0 128 0L256 0c23.7 0 44.4 12.9 55.4 32zM248 112c13.3 0 24-10.7 24-24s-10.7-24-24-24L136 64c-13.3 0-24 10.7-24 24s10.7 24 24 24l112 0zM128 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm32 0c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0c-13.3 0-24 10.7-24 24zm0 128c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-112 0c-13.3 0-24 10.7-24 24zM96 416a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+                <p>No tasks here yet</p>
+            </div>
+        </div>
+
+        <footer>
+            <p id="items-left">0 items left</p>
+            <button id="clear-completed">Clear completed</button>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
